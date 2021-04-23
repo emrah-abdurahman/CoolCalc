@@ -1,0 +1,60 @@
+.grid-container {
+  float: left;
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  gap: 10px;
+  width: 300px;
+  padding: 10px;
+  background-color: black;
+  border-radius: 5px;
+  text-align: center;
+}
+
+#logo,
+#display {
+  grid-column-start: 1;
+  grid-column-end: 6;
+}
+
+#logo {
+  color: midnightblue;
+  font-family: "Courier New", Courier, monospace;
+  border-bottom: 2px solid red;
+  text-align: center;
+}
+
+#display {
+  padding-right: 5px;
+  text-align: right;
+  background-color: rgb(187, 188, 189);
+  border-radius: 5px;
+}
+
+#displayOperation,
+#displayCurrent {
+  height: 10px;
+  padding-bottom: 0;
+}
+
+#divideBtn,
+#multiplyBtn,
+#subtractBtn,
+#addBtn,
+#equalsBtn {
+  grid-column-start: 4;
+  grid-column-end: 6;
+}
+
+.button {
+  width: 100%;
+  border-radius: 5px;
+  background-color: royalblue;
+}
+
+.historyLog {
+  float: left;
+  margin-left: 20px;
+  width: 250px;
+  padding: 0 5px 0 5px;
+  border: 1px solid black;
+}

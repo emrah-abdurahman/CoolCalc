@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CoolCalc - The Coolest Calculator on the Web!</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <!-- The CSS Grid has 5 columns -->
+    <div class="grid-container">
+      <!-- Row 1 -->
+      <div id="logo">
+        <!-- The calculator logo. It spans all columns -->
+        <h1>CoolCalc v1.0</h1>
+      </div>
+
+      <!-- Row 2 -->
+      <div id="display">
+        <!-- The calculator display. It spans all columns -->
+        <p id="displayOperation"><b></b></p>
+        <p id="displayCurrent"><b>0</b></p>
+      </div>
+      <!-- Row 3 -->
+      <div>
+        <!-- Empty -->
+      </div>
+      <div>
+        <!-- Empty -->
+      </div>
+      <div id="ceBtn">
+        <button type="button" class="button">
+          <p><b>CE</b></p>
+        </button>
+      </div>
+      <div id="cBtn">
+        <button type="button" class="button">
+          <p><b>C</b></p>
+        </button>
+      </div>
+      <div id="undoBtn">
+        <button type="button" class="button">
+          <p><b>&lt;&#9746;</b></p>
+        </button>
+      </div>
+
+      <!-- Row 4 -->
+      <div>
+        <!-- Empty -->
+      </div>
+      <div>
+        <!-- Empty -->
+      </div>
+      <div id="pwrBtn">
+        <button type="button" class="button">
+          <p>
+            <b>x<sup>2</sup></b>
+          </p>
+        </button>
+      </div>
+      <div id="divideBtn">
+        <button type="button" class="button">
+          <p><b>&divide;</b></p>
+        </button>
+      </div>
+
+      <!-- Row 5 -->
+      <div>
+        <button type="button" class="button numericalBtn">
+          <p><b>7</b></p>
+        </button>
+      </div>
+      <div>
+        <button type="button" class="button numericalBtn">
+          <p><b>8</b></p>
+        </button>
+      </div>
+      <div>
+        <button type="button" class="button numericalBtn">
+          <p><b>9</b></p>
+        </button>
+      </div>
+      <div id="multiplyBtn">
+        <button type="button" class="button">
+          <p><b>&times;</b></p>
+        </button>
+      </div>
+
+      <!-- Row 6 -->
+      <div>
+        <button type="button" class="button numericalBtn">
+          <p><b>4</b></p>
+        </button>
+      </div>
+      <div>
+        <button type="button" class="button numericalBtn">
+          <p><b>5</b></p>
+        </button>
+      </div>
+      <div>
+        <button type="button" class="button numericalBtn">
+          <p><b>6</b></p>
+        </button>
+      </div>
+      <div id="subtractBtn">
+        <button type="button" class="button">
+          <p><b>&minus;</b></p>
+        </button>
+      </div>
+
+      <!-- Row 7 -->
+      <div>
+        <button type="button" class="button numericalBtn">
+          <p><b>1</b></p>
+        </button>
+      </div>
+      <div>
+        <button type="button" class="button numericalBtn">
+          <p><b>2</b></p>
+        </button>
+      </div>
+      <div>
+        <button type="button" class="button numericalBtn">
+          <p><b>3</b></p>
+        </button>
+      </div>
+      <div id="addBtn">
+        <button type="button" class="button">
+          <p><b>&plus;</b></p>
+        </button>
+      </div>
+
+      <!-- Row 8 -->
+      <div>
+        <!-- Empty -->
+      </div>
+      <div>
+        <button type="button" class="button numericalBtn">
+          <p><b>0</b></p>
+        </button>
+      </div>
+      <div>
+        <button type="button" class="button">
+          <p><b>.</b></p>
+        </button>
+      </div>
+      <div id="equalsBtn">
+        <button type="button" class="button">
+          <p><b>&equals;</b></p>
+        </button>
+      </div>
+    </div>
+
+    <!-- User's history log -->
+    <div class="historyLog">
+      <h1>HISTORY LOG:</h1>
+      <p>Placeholder text</p>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
