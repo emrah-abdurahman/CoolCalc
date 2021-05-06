@@ -1,55 +1,55 @@
 // Initializing the variables and getting all buttons
-let displayNum = 0;
-let nums = [];
-let currentoperator = "";
-let leftOperand;
-let rightOperand;
-let display = document.querySelector("#display");
-let displayOperation = document.querySelector("#displayOperation");
-let btns = document.querySelectorAll(".button");
-//Adding a click event listener for all buttons
+// let displayNum = 0;
+// let nums = [];
+// let currentoperator = "";
+// let leftOperand;
+// let rightOperand;
+let displayCurrent = document.querySelector("#displayCurrent");
 
+//Adding a click event listener for all buttons
+let btns = document.querySelectorAll(".button");
 for (let btn of btns) {
   btn.addEventListener("click", function () {
-    updateDisplay(this);
+    clickedBtnId(btn);
   });
 }
 
 // Function for updating the display depending on which button is pressed
-function updateDisplay(btn) {
+function clickedBtnId(btn) {
   switch (btn.innerText) {
     case "C":
       clearDisplay();
       break;
     case "0":
-      numBtnUpdateDisplay(0);
+      numUpdateDisplay(0);
+      console.log(btn.innerText);
       break;
     case "1":
-      numBtnUpdateDisplay(1);
+      numUpdateDisplay(1);
       break;
     case "2":
-      numBtnUpdateDisplay(2);
+      numUpdateDisplay(2);
       break;
     case "3":
-      numBtnUpdateDisplay(3);
+      numUpdateDisplay(3);
       break;
     case "4":
-      numBtnUpdateDisplay(4);
+      numUpdateDisplay(4);
       break;
     case "5":
-      numBtnUpdateDisplay(5);
+      numUpdateDisplay(5);
       break;
     case "6":
-      numBtnUpdateDisplay(6);
+      numUpdateDisplay(6);
       break;
     case "7":
-      numBtnUpdateDisplay(7);
+      numUpdateDisplay(7);
       break;
     case "8":
-      numBtnUpdateDisplay(8);
+      numUpdateDisplay(8);
       break;
     case "9":
-      numBtnUpdateDisplay(9);
+      numUpdateDisplay(9);
       break;
     case "+":
       operatorUpdateDisplay("+");
@@ -57,15 +57,13 @@ function updateDisplay(btn) {
   }
 }
 
-function numBtnUpdateDisplay(value) {
-  if (total[0] === 0) {
-    total.pop();
-    total.push(value);
-    displayCurrent.innerHTML = `<p><b>${total.join("")}</b></p>`;
-    return;
+function numUpdateDisplay(value) {
+  if (displayCurrent.innerText === "0") {
+    displayCurrent.innerText = "";
+    displayCurrent.innerText += value.toString();
+  } else {
+    displayCurrent.innerText += value.toString();
   }
-  total.push(value);
-  displayCurrent.innerHTML = `<p><b>${total.join("")}</b></p>`;
 }
 
 function operatorUpdateDisplay(value) {
@@ -79,7 +77,5 @@ function operatorUpdateDisplay(value) {
 }
 
 function clearDisplay() {
-  total = [0];
-  displayOperation.innerHTML = `<p><b></b></p>`;
-  displayCurrent.innerHTML = `<p><b>${total.join("")}</b></p>`;
+  displayCurrent.innerText = "0";
 }

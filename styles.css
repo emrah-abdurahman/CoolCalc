@@ -34,6 +34,7 @@
 #displayCurrent {
   height: 10px;
   padding-bottom: 0;
+  font-weight: bold;
 }
 
 #divideBtn,
