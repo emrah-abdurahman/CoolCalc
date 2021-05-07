@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CoolCalc - The Coolest Calculator on the Web!</title>
     <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
   </head>
 
   <body>
@@ -35,7 +36,7 @@
         </button>
       </div>
       <div id="cBtn">
-        <button type="button" class="button">
+        <button type="button" class="button" data-button-type="clear-button">
           <p><b>C</b></p>
         </button>
       </div>
@@ -59,73 +60,73 @@
         </button>
       </div>
       <div id="divideBtn">
-        <button type="button" class="button">
+        <button type="button" class="button" data-button-type="operator-button">
           <p><b>&divide;</b></p>
         </button>
       </div>
 
       <!-- Row 5 -->
       <div>
-        <button type="button" class="button">
+        <button type="button" class="button" data-button-type="number-button">
           <p><b>7</b></p>
         </button>
       </div>
       <div>
-        <button type="button" class="button">
+        <button type="button" class="button" data-button-type="number-button">
           <p><b>8</b></p>
         </button>
       </div>
       <div>
-        <button type="button" class="button">
+        <button type="button" class="button" data-button-type="number-button">
           <p><b>9</b></p>
         </button>
       </div>
       <div id="multiplyBtn">
-        <button type="button" class="button">
+        <button type="button" class="button" data-button-type="operator-button">
           <p><b>&times;</b></p>
         </button>
       </div>
 
       <!-- Row 6 -->
       <div>
-        <button type="button" class="button">
+        <button type="button" class="button" data-button-type="number-button">
           <p><b>4</b></p>
         </button>
       </div>
       <div>
-        <button type="button" class="button">
+        <button type="button" class="button" data-button-type="number-button">
           <p><b>5</b></p>
         </button>
       </div>
       <div>
-        <button type="button" class="button">
+        <button type="button" class="button" data-button-type="number-button">
           <p><b>6</b></p>
         </button>
       </div>
       <div id="subtractBtn">
-        <button type="button" class="button">
+        <button type="button" class="button" data-button-type="operator-button">
           <p><b>&minus;</b></p>
         </button>
       </div>
 
       <!-- Row 7 -->
       <div>
-        <button type="button" class="button">
+        <button type="button" class="button" data-button-type="number-button">
           <p><b>1</b></p>
         </button>
       </div>
       <div>
-        <button type="button" class="button">
+        <button type="button" class="button" data-button-type="number-button">
           <p><b>2</b></p>
         </button>
       </div>
       <div>
-        <button type="button" class="button">
+        <button type="button" class="button" data-button-type="number-button">
           <p><b>3</b></p>
         </button>
       </div>
       <div id="addBtn">
-        <button type="button" class="button">
+        <button type="button" class="button" data-button-type="operator-button">
           <p><b>&plus;</b></p>
         </button>
       </div>
@@ -135,7 +136,7 @@
         <!-- Empty -->
       </div>
       <div>
-        <button type="button" class="button">
+        <button type="button" class="button" data-button-type="number-button">
           <p><b>0</b></p>
         </button>
       </div>
@@ -145,7 +146,7 @@
         </button>
       </div>
       <div id="equalsBtn">
-        <button type="button" class="button">
+        <button type="button" class="button" data-button-type="operator-button">
           <p><b>&equals;</b></p>
         </button>
       </div>
@@ -156,6 +157,5 @@
       <h1>HISTORY LOG:</h1>
       <p>Placeholder text</p>
     </div>
-    <script src="app.js"></script>
   </body>
 </html>

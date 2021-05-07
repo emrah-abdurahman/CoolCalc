@@ -1,81 +1,39 @@
-// Initializing the variables and getting all buttons
-// let displayNum = 0;
-// let nums = [];
-// let currentoperator = "";
-// let leftOperand;
-// let rightOperand;
-let displayCurrent = document.querySelector("#displayCurrent");
+// Assigning both the current display and operation displays to variables
+const displayOperation = document.querySelector("#displayOperation");
+const displayCurrent = document.querySelector("#displayCurrent");
 
-//Adding a click event listener for all buttons
-let btns = document.querySelectorAll(".button");
-for (let btn of btns) {
-  btn.addEventListener("click", function () {
-    clickedBtnId(btn);
+// Gathering all buttons into a NodeList variable and ddding a click event listener for all buttons
+const buttons = document.querySelectorAll(".button");
+for (let button of buttons) {
+  button.addEventListener("click", () => {
+    const buttonType = button.getAttribute("data-button-type");
+    if (buttonType === "number-button") numUpdateDisplay(button.innerText);
+    if (buttonType === "operator-button")
+      operatorUpdateDisplay(button.innerText);
+    if (buttonType === "clear-button") clearDisplay();
   });
 }
 
-// Function for updating the display depending on which button is pressed
-function clickedBtnId(btn) {
-  switch (btn.innerText) {
-    case "C":
-      clearDisplay();
-      break;
-    case "0":
-      numUpdateDisplay(0);
-      console.log(btn.innerText);
-      break;
-    case "1":
-      numUpdateDisplay(1);
-      break;
-    case "2":
-      numUpdateDisplay(2);
-      break;
-    case "3":
-      numUpdateDisplay(3);
-      break;
-    case "4":
-      numUpdateDisplay(4);
-      break;
-    case "5":
-      numUpdateDisplay(5);
-      break;
-    case "6":
-      numUpdateDisplay(6);
-      break;
-    case "7":
-      numUpdateDisplay(7);
-      break;
-    case "8":
-      numUpdateDisplay(8);
-      break;
-    case "9":
-      numUpdateDisplay(9);
-      break;
-    case "+":
-      operatorUpdateDisplay("+");
-      break;
-  }
-}
-
+// Updates the current display when a number button has been clicked by the user
 function numUpdateDisplay(value) {
   if (displayCurrent.innerText === "0") {
-    displayCurrent.innerText = "";
-    displayCurrent.innerText += value.toString();
+    displayCurrent.innerText = value;
   } else {
-    displayCurrent.innerText += value.toString();
+    displayCurrent.innerText += value;
   }
 }
 
+// Updates the operator display when the user clicks on an arithmetic operator
 function operatorUpdateDisplay(value) {
-  leftOperand = Number(total.join(""));
-  currentoperator = value;
-  console.log(currentoperator);
-  displayOperation.innerHTML = `<p><b>${total.join(
-    ""
-  )} ${currentoperator}</b></p>`;
-  total = [0];
+  let total = 0;
+  if (Number(displayCurrent.innerText)) {
+    total += Number(displayCurrent.innerText);
+    displayOperation.innerText = `${total}${value}`.toString();
+  }
 }
 
+// Clears the display when the user clicks on the Clear button
 function clearDisplay() {
+  displayOperation.innerText = "";
   displayCurrent.innerText = "0";
 }
