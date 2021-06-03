@@ -37,11 +37,11 @@
   font-weight: bold;
 }
 
-#divideBtn,
-#multiplyBtn,
-#subtractBtn,
-#addBtn,
-#equalsBtn {
+#divideDiv,
+#multiplyDiv,
+#subtractDiv,
+#addDiv,
+#equalsDiv {
   grid-column-start: 4;
   grid-column-end: 6;
 }
